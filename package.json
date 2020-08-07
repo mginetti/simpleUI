@@ -1,0 +1,67 @@
+{
+  "name": "simpleui",
+  "version": "0.1.0",
+  "main": "dist/simple-ui.umd.js",
+  "module": "dist/simple-ui.esm.js",
+  "unpkg": "dist/simple-ui.min.js",
+  "browser": {
+    "./simple-btn": "./dist/components/simple-btn/simple-btn.es.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "vetur": {
+    "tags": "tags.json",
+    "attributes": "attributes.json"
+  },
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/simple-ui.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/simple-ui.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/simple-ui.min.js"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.14.4",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.7.2",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-replace": "^2.3.1",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-unit-jest": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.0.3",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "json-server": "^0.15.1",
+    "klaw-sync": "^6.0.0",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.18.2",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-paths": "0.0.4",
+    "rollup-plugin-terser": "^5.2.0",
+    "sass-loader": "^8.0.0",
+    "signalrjs": "^0.2.2",
+    "vue-cli-plugin-styleguidist": "^3.26.2"
+  }
+}
