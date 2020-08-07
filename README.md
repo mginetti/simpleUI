@@ -1,2 +1,0 @@
-# simpleUI
-A simple UI
